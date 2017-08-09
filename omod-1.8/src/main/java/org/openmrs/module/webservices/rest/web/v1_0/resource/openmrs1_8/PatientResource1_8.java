@@ -265,10 +265,7 @@ public class PatientResource1_8 extends DataDelegatingCrudResource<Patient> {
 	 */
 	@PropertyGetter("display")
 	public String getDisplayString(Patient patient) {
-		if (patient.getPatientIdentifier() == null)
-			return "";
-		
-		return patient.getPatientIdentifier().getIdentifier() + " - " + patient.getPersonName().getFullName();
+		return patient.getPersonName().getFullName();
 	}
 	
 	@Override

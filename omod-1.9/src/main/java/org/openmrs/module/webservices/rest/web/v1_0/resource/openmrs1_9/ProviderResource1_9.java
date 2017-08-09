@@ -193,10 +193,7 @@ public class ProviderResource1_9 extends MetadataDelegatingCrudResource<Provider
 	@Override
 	@PropertyGetter("display")
 	public String getDisplayString(Provider provider) {
-		if (provider.getIdentifier() == null) {
-			return "";
-		}
-		return provider.getIdentifier() + " - " + provider.getName();
+		return provider.getName();
 	}
 	
 	/**
